@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lightbox Test</title>
+  <link rel="stylesheet" media="all" href="./lightbox.css">
+</head>
+<body>
+<div class="lightbox-gallery">
+  <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg"
+       alt="Toy car on the road."
+       onclick="openLightbox();toSlide(1)">
+  <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg"
+       alt="Toy car exploring offroad."
+       onclick="openLightbox();toSlide(2)">
+  <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg"
+       alt="Toy car in the city."
+       onclick="openLightbox();toSlide(3)"
+       class="preview">
+  <img
+    src="https://images.pexels.com/photos/3277951/pexels-photo-3277951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+    alt="Coffee mug"
+    onclick="openLightbox();toSlide(4)">
+</div>
+<div id="lightbox" class="modal">
+  <span class="close pointer" onclick="closeLightbox()">&times;</span>
+  <div class="modal-content">
+    <div class="slide">
+      <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="image-slide"
+           alt="Toy car on the road."/>
+    </div>
+    <div class="slide">
+      <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="image-slide"
+           alt="Toy car exploring offroad."/>
+    </div>
+    <div class="slide">
+      <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="image-slide"
+           alt="Toy car in the city."/>
+    </div>
+    <div class="slide">
+      <img
+        src="https://images.pexels.com/photos/3277951/pexels-photo-3277951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        alt="Coffee mug"/>
+    </div>
+    <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+</div>
+<script src="./lightbox.js"></script>
+</body>
+</html>
